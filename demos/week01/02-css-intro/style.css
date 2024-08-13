@@ -1,6 +1,6 @@
 body {
     background-color: tomato;
-    color: red;
+    color: rgb(255, 255, 255);
 }
 
 /* all my p tags are white -  */
@@ -11,6 +11,28 @@ p {
 h1 {
     color: pink;
 }
+
+/* you can select multiple elements in one go */
+
+p, h1 {
+    font-family: monospace;
+}
+
+/* selecting direct children of a different element. */
+
+.facts > p {
+    background-color: blueviolet;
+}
+
+.list-of-facts > * {
+    list-style: none;
+}
+
+/* all decendents of the .facts class who are p tags */
+.facts p {
+    font-family: fantasy;
+}
+
 img {
     height: 400px;
     width: 400px;
@@ -23,3 +45,26 @@ img {
 .cool-font {
     font-family: fantasy;
 }
+
+
+/* select elements directly after another element (they are siblings) */
+
+div ~ p {
+    background-color: rgb(94, 94, 94);
+}
+
+/* psudo selectors */
+
+div ~ p:hover > .huge {
+    background-color: pink;
+    cursor: grab;
+}
+
+p:first-child {
+   color: red 
+}
+
+/* use hover! */
+/* class selector */
+/* use the child selector (>)  */
+/* * to select everything */
