@@ -1,0 +1,25 @@
+body {
+    background-color: tomato;
+    color: red;
+}
+
+/* all my p tags are white -  */
+p {
+    color: white;
+}
+
+h1 {
+    color: pink;
+}
+img {
+    height: 400px;
+    width: 400px;
+}
+
+.article-text {
+    color:cornsilk;
+}
+
+.cool-font {
+    font-family: fantasy;
+}
