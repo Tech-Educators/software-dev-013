@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+.box {
+    height: 500px;
+    width: 500px;
+    background-color: tomato;
+    /* border: 8px solid rgb(22, 241, 69); */
+    border-width: 8px;
+    border-style: dotted;
+    border-color: cadetblue;
+    padding: 20px;
+    margin: 200px;
+    /* box-sizing allows us to tell css to include padding and border in the width and height calculations  */
+    box-sizing: border-box;
+}
+
+.box2 {
+    height: 500px;
+    width: 500px;
+    background-color: tomato;
+    /* border: 8px solid rgb(22, 241, 69); */
+    border-width: 8px;
+    border-style: dotted;
+    border-color: cadetblue;
+    padding: 20px;
+    margin: 200px;
+    /* default box sizing */
+    box-sizing: content-box;
+}
+
+/* top right bottom left */
