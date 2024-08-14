@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+/* this is my box styles! */
+.box {
+    border: 5px solid red;
+    height: 500px;
+    width: 500px;
+    padding: 5px;
+
+}
+
+p {
+
+}
