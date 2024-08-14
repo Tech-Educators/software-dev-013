@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+/* you apply display:flex to the parent container of the elements you want to flex! */
+
+.box {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 62px;
+    /* below is a hackey way to put text in the center - but now you've learned flexbox, so you don't need to do this.*/
+    text-align: center;
+    vertical-align: center;
+    line-height: 150px;
+    color: white;
+}
+
+.one {background-color: #A4243B; flex-basis: 400px}
+.two {background-color: #d8c99b;}
+.three{background-color: #D8973C;}
+.four{background-color: #BD632F;}
+.five{background-color: #273E47;}
+
+
+
+.container {
+    border: 2px dotted black;
+    height: 90svh;
+    width: 90svw;
+    display: flex;
+    flex-direction: row;
+    /* justify content - align items across the main axis 
+    row - main axis is horizontal
+    column - main axis is verticle
+    */
+    justify-content: center;
+    /* align items aligns items across the 'cross' axis*/
+    align-items: center;
+    gap: 10px;
+}
+
+/* by default, things are laid out in a row */
+/* we can use the 'flex-direction' to change the way things are laid out */
+
+.fancy {
+    color: #A4243B;
+    font-family: cursive;
+}
