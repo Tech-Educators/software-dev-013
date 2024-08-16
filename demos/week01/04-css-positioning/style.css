@@ -44,7 +44,7 @@ will reserver the intial space that it had in the document flow.
 .fixed {
     position: fixed;
     left: 420px;
-    top: 0px;
+    top: 240px;
 }
 
 
