@@ -63,7 +63,7 @@ if (playerHasKey && didDefeatDragon) {
     console.log('The player cannot get the door open.')
 }
 
-if (playerTwo != 'Sam' && didDefeatDragon) {
+if ('Sam' != 'Sam' && didDefeatDragon) {
     console.log(`${playerTwo} steals the dragon heart!`)
 } else {
     console.log(`${playerTwo} joins the battle!`)
@@ -74,3 +74,28 @@ if (9 >= 9) {
     console.log('yes')
 }
 console.log("This is after the if statement!")
+
+let x = 5
+// single quotes =
+console.log('this is a string of characters! ' + x)
+
+console.log(`this is a string of characters x ${x}`)
+
+
+// U, PG, 12, 15, and 18
+let age = prompt('What is your age?');
+let movieRating = "12";
+
+if (age > 17) {
+  console.log("You can watch any movie!");
+} else if (age == 17) {
+  if (movieRating === "PG") {
+    console.log("You can watch the movie!");
+  } else if (movieRating == '12') {
+    console.log('You cant watch this pg 12 movie!')
+  } else if (movieRating == 'U') {
+    console.log('You can watch this U Rated movie')
+  }
+} else if (age < 17) {
+
+}
