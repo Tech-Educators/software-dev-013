@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 * {
     margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 .thing {
@@ -16,7 +20,6 @@
 
 .feature {
     height: 100svh;
-    width: 100svw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,4 +31,30 @@
 
 .digger {
     background-image: url('https://images.unsplash.com/photo-1558869246-bf684e4f5e17?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.worker {
+    background-image: url('https://images.unsplash.com/photo-1563166423-482a8c14b2d6?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.section {
+    position: relative;
+    top: 515px;
+    left: 65px;
+    width:fit-content;
+}
+
+.header {
+    position: fixed;
+}
+
+.header > * {
+    text-decoration: none;
+    color: white;
+}
+
+.text {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: normal;
 }
