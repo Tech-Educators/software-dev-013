@@ -25,9 +25,24 @@ function addTwoTimesNinety(number) {
 // turns that number into a string
 // with some cool ascii art.s
 
-function numberToAsciiArt(number) {
-    return `(҂◡_◡) ᕤ ${number} is the best there ever was`
+function numberToAsciiArt(number, name) {
+    return `(҂◡_◡) ᕤ ${number} is the best there ever was. I hope you remember him fondly, ${name}`
 }
+
+numberToAsciiArt(15, 'Jon')
 
 
 console.log(numberToAsciiArt(addTwoTimesNinety(40)))
+
+
+
+
+
+function calculateBreakDistance(n) {
+    return n / 2
+}
+
+calculateBreakDistance(4)
+calculateBreakDistance(10)
+calculateBreakDistance(2)
+calculateBreakDistance(13)
