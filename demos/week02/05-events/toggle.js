@@ -23,10 +23,10 @@ simpleButton.addEventListener('hover', function() {
 
 // declaring {}'s
 
-function () {
+// function () {
 
-}
+// }
 
 // invoking
 
-functionName() 
+// functionName() 
