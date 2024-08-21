@@ -70,7 +70,7 @@ console.log(counter)
 const bugs = ['Goggas', 'jumping spiders', 'ladybug', 'earwig']
 
 for (let i = 0; i < bugs.length; i++) {
-    console.log(`This is a bug: ${bugs[i]}`)
+    console.log(`This is a bug: ${bugs[i]}, ${i}`)
 }
 
 // `This is a bug: Goggas
