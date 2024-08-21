@@ -107,3 +107,22 @@ myAwesomeFunction((data) => { console.log("It was successful: ", data.message);}
 myAwesomeFunction(function(data) {console.log('Syccess',data.message);}, function() {
     console.log('It failed :(')
 });
+
+
+
+function goShop() {
+    let shoppingCart = ['eggs', 'milk', 'coffee', 'cinnamon', 'vanilla']
+    return shoppingCart
+}
+
+function bake() {
+    // ???
+
+    let ingrediants = goShop()
+    let egg = ingrediants[0]
+
+    // crack open egg.
+    // do stuff
+    // return cake
+}
+
