@@ -35,20 +35,15 @@ calculate(15, 5, theFunctiondivide) // 3
 calculate(312123, 3423423, subtract) // -3111300
 calculate(123321, 2, multiply) // 246642
 
-
-
-function add(a, b) {
+const add = (a, b) => {
     return a + b
 }
-
 function subtract(a, b) {
     return a - b
 }
-
 function multiply(a, b) {
     return a * b
 }
-
 function theFunctiondivide(a,b) {
     return a / b
 }
@@ -80,6 +75,8 @@ const findLog = function() {
 
 }
 
+// findLog()
+
 // arrow functions 
 
 const findButterfly = () => {
@@ -87,3 +84,26 @@ const findButterfly = () => {
 }
 
 findButterfly()
+
+
+function myAwesomeFunction(onSuccessCallback, onFailureCallback) {
+    console.log("Running myAwesomeFunction... doing complex tasks...");
+    console.log("Complex task complete. I will notify the user");
+  
+    // randomly choose if success is true or false
+    const success = Math.random() > 0.5;
+    if (success) {
+      onSuccessCallback({
+        message: "This is the message of success",
+      });
+    } else {
+      onFailureCallback();
+    }
+  }
+
+myAwesomeFunction((data) => { console.log("It was successful: ", data.message);},() => {console.log("It failed :(");});
+
+// normal version
+myAwesomeFunction(function(data) {console.log('Syccess',data.message);}, function() {
+    console.log('It failed :(')
+});
