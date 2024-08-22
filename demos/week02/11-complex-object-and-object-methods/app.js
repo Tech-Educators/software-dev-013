@@ -7,10 +7,17 @@ const bunny = {
 }
 
 // looping through an array thats inside an object.
+let finalString = ''
 for (let i = 0; i < bunny.favFoods.length; i++) {
-    console.log(bunny.favFoods[i])
+    if (i === bunny.favFoods.length - 1) {
+        finalString+= bunny.favFoods[i] + '.'
+        continue;
+    }
+    
+    finalString += bunny.favFoods[i] + ', '
 }
 
+console.log(`${bunny.name} likes to eat ${finalString}`)
 // carrots
 // rabit food
 // clovers
@@ -45,3 +52,16 @@ const giraffe = {
 console.log(giraffe.eat())
 
 console.log(giraffe.getName('Sam'))
+
+// CREATE AN OBJECT: ]
+
+
+const drink = {
+    type: 'coffee',
+    howWarm: 'Very',
+    wakesMeUp: true,
+    liters: 2,
+    types: ['Dark', 'latte']
+}
+
+drink.type // coffee
