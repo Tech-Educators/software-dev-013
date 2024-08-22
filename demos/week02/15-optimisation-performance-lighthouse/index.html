@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Image Optimisation</title>
+</head>
+<body>
+    <img srcset="
+        ./assets/400x400.jpg 400w,
+        ./assets/600x600.jpg 600w,
+        ./assets/800x800.jpg 800w,
+        ./assets/1000x1000.jpg 1000w,
+        ./assets/2000x2000.jpg 2000w
+    "
+    src="./assets/2000x2000.jpg" alt="forest" />
+
+    <p>When the page loads - it will look at the screen of the viewport and only load the suitable image for that size - no rendering 4ks on a mobile device!</p>
+</body>
+</html>

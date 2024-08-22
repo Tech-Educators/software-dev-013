@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    background-color: rgb(34, 34, 34);
+  }
+  
+  img {
+    max-width: 50px;
+  }
+
+
+p {
+    color: pink;
+}
+
