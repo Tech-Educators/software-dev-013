@@ -1,0 +1,33 @@
+* {
+    margin: 0px;
+}
+
+/* FR - fractioin. */
+
+.grid-wrapper {
+    height: 100svh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr ;
+    grid-template-rows: repeat(3, 1fr) 2fr;
+}
+
+.item {
+    background-color: tomato;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+}
+
+.nav-bar {
+    background-color: indigo;
+    color: white;
+    /* grid-column: ; */
+    /* grid-column-start: 2;
+    grid-column-end: 5; */
+    /* below is a shorthand for column-start / column-end */
+    grid-column: 2 / 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
