@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./app.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Links, Buttons ect will have their important content read out -->
+    <a href="https://google.com">Google</a>
+    <!-- <p>But if we have a button that just says read more - this might make sense to a sighted user who can see the context, but not to someone using a screen reader:</p> -->
+    <a href="/posts" aria-label="Read more about sea otters">Read More</a>
+
+    <!-- <p>And if we have dynamic content (being changed with javascript) the screen reader won't know to update:</p> -->
+
+    <div id="notificationDisplay" aria-live="assertive">No new notifications</div>     
+    <button id="notification">Generate Notification</button>
+
+    <p>A very <span>important </span>image</p>
+    <p>tabindex="0" turns onfocusing</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="a very cute otter in the water" tabindex="0"/>
+
+    <p>This button is purely decorative and doesn't need to be read by screen readers:</p>
+    <p>tabindex="-1" turns off focusing</p>
+    <button aria-hidden="true" tabindex="-1">🔔</button>
+</body>
+</html>
