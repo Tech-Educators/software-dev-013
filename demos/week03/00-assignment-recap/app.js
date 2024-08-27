@@ -15,7 +15,7 @@ myArray.forEach(function(number) {
 
 
 function foo() {
-    
+
 }
 // 1
 // 2
@@ -36,3 +36,4 @@ let myInfo = {
 }
 
 console.log(myInfo.city) //Liverpool
+
