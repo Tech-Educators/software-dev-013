@@ -2,7 +2,7 @@
 // as an exercise I would like you 
 // find an api that interests you
 // fetch the data with a function
-// 
+// bonus points if you use the data to create some HTML
 
 async function getData(bird) {
     // get the response from the xeno-canto server
@@ -14,3 +14,13 @@ async function getData(bird) {
 
 getData('eagle')
 getData('owl')
+
+
+// async function getCarbon(websiteThatIWantToTest) {
+//     const result = await fetch(`https://api.websitecarbon.com/site?url=${websiteThatIWantToTest}`)
+//     // read as json
+//     const carbonResults = await result.json()
+//     console.log(carbonResults)
+// }
+
+// getCarbon(`https://techeducators.co.uk`)
