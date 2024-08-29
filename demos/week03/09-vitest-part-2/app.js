@@ -1,12 +1,12 @@
 const isPalindromeQuick = string => string.split('').reverse().join('') === string
 
 
-function moreNormal (string) {
-    const split = string.split('') // ['r','a','c', 'e', 'a','r']
-    const reversedArray = split.toReversed()
-    const backToString = reversedArray.join('')
-    return backToString === string
-}
+// function moreNormal (string) {
+//     const split = string.split('') // ['r','a','c', 'e', 'a','r']
+//     const reversedArray = split.toReversed()
+//     const backToString = reversedArray.join('')
+//     return backToString === string
+// }
 // write a function
 // @param = string 
 // @return = true/false (boolean)
@@ -22,15 +22,6 @@ export function isPalindrome(string) {
     return true
 }
 
-console.log(isPalindrome('racecar')) // true
-console.log(isPalindrome('racetrack'))
-console.log(isPalindrome('madam')) // true
-console.log(isPalindrome('tenet'))
-
-
-isPalindrome('racetrack') // false
-isPalindrome('madam') // true
-isPalindrome('tenet')
 
 
 function isPalindrome2(string) {
