@@ -1,47 +1,51 @@
-// console.log('Hello')
+const notificationDiv = document.getElementById('notif')
 
-// TIMEOUT 
-
-// Basic format - 
-// basicTimeout that runs something after 5 second
-setTimeout(function() {}, 5000) // this function does nothing because it's empty
-
-// lets write a function that actually does something
-
-setTimeout(function() {
-    console.log('I have waited for this moment...')
-}, 5000)
+const button = document.getElementById('button')
 
 
+button.addEventListener('click', function() {
 
-// LOOPing through array over and over
-// const places = ['France', 'Germany', 'England', 'Foo']
+    notificationDiv.style.display = 'block'
+    button.style.backgroundColor = 'teal'
 
-// let counter = 0
-// setInterval(function() {
-//     if (counter === places.length) {
-//         counter = 0 
-//     }
-//     console.log(places[counter])
-//     counter = counter + 1
-// }, 1000)
+    setTimeout(function() {
+        notificationDiv.style.display = 'none'
+    }, 5000)
+
+})
 
 
-function threaten() {
-    console.log('I have waited a long time.... >:)')
+
+const timeDisplay = document.getElementById('timeDisplay')
+const timeButton = document.getElementById('timeButton')
+
+// set Interval
+
+// have a varible
+// that tracks the time
+// every second, update the variable
+let time = 0;
+
+// this variable is going to hold the ID of our interval
+// in the future
+// we need the id so we can stop the interval running later
+let interval;
+// is the timer running yet or not
+let isIntervalRunning = false; 
+
+function handleClick() {
+    if (isIntervalRunning) {
+        clearInterval(interval)
+        isIntervalRunning = false;
+        timeButton.innerText = 'Start Timer'
+    } else {
+        interval = setInterval(function() {
+            time = time + 1  
+            timeDisplay.innerText = time
+        }, 1000)
+        isIntervalRunning = true;
+        timeButton.innerText = 'Stop Timer'
+    }
 }
 
-setTimeout(threaten, 6000)
-
-console.log('Hello')
-
-// INTERVAL
-
-// a function to run, and how often to run that function
-setInterval(function() {}, 1000) // doesn't do anything because it's empty
-
-// actual example
-
-setInterval(function() {
-    console.log(`ᕕ(╭ರ╭ ͟ʖ╮•́)⊃¤=(————-`)
-}, 1000)
+timeButton.addEventListener('click', handleClick)
