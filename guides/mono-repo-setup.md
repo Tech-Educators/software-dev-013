@@ -12,6 +12,7 @@ The project structure will be as follows:
     - app.js
     - style.css
   - server
+    - .env
     - node_modules
     - package.json
     - server.js
