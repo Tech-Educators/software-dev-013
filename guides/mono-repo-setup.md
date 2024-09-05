@@ -142,7 +142,9 @@ The project structure will be as follows:
    });
    ```
 
-7. In the `client` create an app.js and an index.html files. In the html file put:
+7. Create a `.env` file in the `server` directory. This is where we will store our DATABASE_URL from Supabase.
+
+8. In the `client` create an app.js and an index.html files. In the html file put:
    ```html
    <!DOCTYPE html>
    <html lang="en">
