@@ -70,7 +70,7 @@ The project structure will be as follows:
 3. Install required dependencies:
 
    ```bash
-   npm install express cors
+   npm install express cors pg dotenv
    ```
 
 4. cd back up to the root of the mono-repo
@@ -116,11 +116,22 @@ The project structure will be as follows:
 
    ```js
    // server.js
+   // import our node modules
    import express from "express";
    import cors from "cors";
+   import pg from "pg";
+   import dotenv from "dotenv";
+
+   // setup the server
    const app = express();
    app.use(cors());
    app.use(express.json());
+   dotenv.config();
+
+   // connect to our database
+   const db = new pg.Pool({
+     connectionString: process.env.DATABASE_URL,
+   });
 
    app.get("/", (req, res) => {
      res.send("Hello world!");
