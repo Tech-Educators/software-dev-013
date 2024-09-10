@@ -44,6 +44,7 @@ function handleClick() {
             timeDisplay.innerText = time
         }, 1000)
         isIntervalRunning = true;
+        // change text buttion to stop
         timeButton.innerText = 'Stop Timer'
     }
 }

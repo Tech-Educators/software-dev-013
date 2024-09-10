@@ -14,6 +14,7 @@ test(`Check if isPalindrome works 'racecar'`, function() {
     expect(isPalindrome('kayak')).toBe(true)
 })
 
+
 // NPM RUN TEST to start running vitest
 
 // to run your tests
