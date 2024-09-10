@@ -75,3 +75,6 @@ If you forget to finish your quotes in a commit message:
 If you don't provide a commit message, you'll enter a default editor:
 
 1. **Close the terminal and restart your commit message process.**
+
+
+ffoo

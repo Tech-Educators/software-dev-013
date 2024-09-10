@@ -24,6 +24,5 @@ console.log(cowsay.say({
 console.log(cowsay.think({
     text: 'Dont give up! You can do this!',
     f: 'Wizard'
-
 }))
 

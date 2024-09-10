@@ -1,0 +1,18 @@
+{
+  "name": "vittest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^2.0.5"
+  },
+  "dependencies": {
+    "cowsay": "^1.6.0"
+  },
+  "type": "module"
+}

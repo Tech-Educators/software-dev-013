@@ -4,6 +4,9 @@ const declineButton = document.getElementById('decline')
 
 const cookieNotice = document.getElementById('cookie-notice')
 
+// using javascript you can change classes
+// cookieNotice.classList.add('asdfasdf')
+// cookieNotice.setAttribute('class', 'asdfsdf')
 
 // When the page loads - check if we need to display or not
 if (document.cookie.includes('cookiesAccepted')) {
@@ -29,4 +32,4 @@ declineButton.addEventListener('click', function() {
 
 const holidays = 'France Germany London'
 
-holidays.includes('France') // true
+console.log(holidays.includes('France')) // true
