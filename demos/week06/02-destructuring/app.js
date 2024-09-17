@@ -32,7 +32,7 @@ console.log(ages)
 
 
 // this function will always recieve an object
-// always has a property of numberOne and numberTwo
+// that object always has a property of numberOne and numberTwo
 function sumWithObject({numberOne, numberTwo}) {
     return numberOne + numberTwo
 }
