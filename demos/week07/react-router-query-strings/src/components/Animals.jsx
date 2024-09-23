@@ -32,6 +32,18 @@ export default function Animals() {
         animals.sort().reverse()
     }
     
+    // if you want to know what os someone is on (not foolproof!)
+    const uA = navigator.userAgent
+    if (uA.includes('Win')) {
+        console.log('user on windows')
+    } else if (uA.includes('Mac')) {
+        console.log('user on Mac')
+    } else if (uA.includes('Linux')) {
+        console.log('user on Linux')
+    } else {
+        console.log('unknown os')
+    }
+
     return (
         <div>
             <Link to='/animals'>Don't sort</Link>
