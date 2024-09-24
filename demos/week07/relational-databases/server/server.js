@@ -36,7 +36,7 @@ app.get('/books', async (req, res) => {
     try {
 
 
-        if (req.query.include_genres) {
+        if (req.query.include_genres && !req.query.id) {
             const result = await db.query(`SELECT books.title, books.author, array_agg(genres.name) AS genres
             FROM books
             INNER JOIN book_genres ON books.id = book_genres.book_id
@@ -47,10 +47,23 @@ app.get('/books', async (req, res) => {
 
             // early exiting - if it sees res.json it will stop running the rest of the function.
             res.status(200).json(books)
+            return;
         }
 
-
-
+        // this should be moved to a dynamic route instead
+        if (req.query.include_genres && req.query.id) {
+            console.log(req.query.id)
+            const book = (await db.query(`
+            SELECT books.*, array_agg(genres.name) AS genres
+            FROM books
+            FULL JOIN book_genres ON books.id = book_genres.book_id
+            FULL JOIN genres ON book_genres.genre_id = genres.id
+            WHERE books.id = $1
+            GROUP BY books.id`, [req.query.id])).rows[0]
+            console.log(book)
+            res.status(200).json(book)
+            return;
+        }
 
         // short hand to get rows on the same line - using ()'s to signify order of operations.
         const books = (await db.query(`SELECT * FROM books`)).rows
