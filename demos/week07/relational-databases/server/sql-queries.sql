@@ -43,6 +43,12 @@ FULL JOIN book_genres ON books.id = book_genres.book_id
 FULL JOIN genres ON book_genres.genre_id = genres.id;
 
 
+-- Using array agg to join up all genres so we only return a book and its genres
+SELECT books.title, books.author, array_agg(genres.name) AS genres
+FROM books
+INNER JOIN book_genres ON books.id = book_genres.book_id
+INNER JOIN genres ON book_genres.genre_id = genres.id
+GROUP BY books.title, books.author;
 
 
 -- Some test data
