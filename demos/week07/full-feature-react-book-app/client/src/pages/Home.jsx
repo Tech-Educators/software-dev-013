@@ -4,5 +4,5 @@ export default function Home() {
             <h2>Sams books</h2>
             <p>I do have better taste then you!</p>
         </div>
-)
+    )
 }
