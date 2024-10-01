@@ -1,4 +1,4 @@
-const mushrooms = [
+export const mushrooms = [
     {
       id: 1,
       slug: "chanterelle",
@@ -8,7 +8,7 @@ const mushrooms = [
     },
     {
       id: 2,
-      slug: "shiitake",
+      slug: "shiitake-mushrooms",
       image: "https://blog.sakura.co/wp-content/uploads/2023/08/shiitake-mushrooms-thumbnail.png",
       climate: "Subtropical and temperate regions, particularly in East Asia",
       description: "Shiitake mushrooms are famous in Asian cuisine for their meaty texture and umami flavor. They thrive on decaying hardwood trees and can be cultivated in controlled environments."
@@ -36,3 +36,17 @@ const mushrooms = [
     }
   ];
   
+
+  // I need a function that takes a 'slug' as an argument and compares that argument to the list of mushrooms to return the object im trying to find. 
+
+  export function findBySlug(slug) {
+    return mushrooms.find((mushroom) => mushroom.slug === slug)
+  }
+
+  // export const findBySlug = slug => mushrooms.find(mushroom => mushroom.slug == slug)
+
+  // not so readable
+  //animals/5
+
+  // slug just a human readable url
+  //animal/darcy-the-dog
