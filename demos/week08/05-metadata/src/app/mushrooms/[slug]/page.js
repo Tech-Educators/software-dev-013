@@ -1,5 +1,14 @@
 import { findBySlug } from "@/stores/mushrooms"
 
+
+export function generateMetadata({params})  {
+    const mushroomInfo = findBySlug(params.slug)
+    return {
+        title: `${mushroomInfo.slug} info`,
+        description: `Learn more about ${mushroomInfo.slug}`
+    }
+}
+
 export default function Page({params}) {
     console.log(params)
 
