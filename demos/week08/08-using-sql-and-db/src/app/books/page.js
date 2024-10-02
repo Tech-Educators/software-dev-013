@@ -1,7 +1,7 @@
 import pg from "pg"
 import Link from "next/link"
 
-export default async function BookPage() {
+export default async function BookPage({params, searchParams}) {
 
     const db = new pg.Pool({
         connectionString: process.env.DB_URL

@@ -8,6 +8,13 @@ export const app = express();
 app.use(express.json());
 app.use(cors());
 dotenv.config();
+
+app.use((req, res, next) => {
+    console.log('Hello!')
+    // tell express to do do the next handler
+    next()
+})
+
 const PORT = 8080;
 
 app.use("/api", routes);
