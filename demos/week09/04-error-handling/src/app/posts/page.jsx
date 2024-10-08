@@ -9,8 +9,10 @@ export default async function Posts() {
   //   console.log("the posts are ", posts);
   console.log(posts.length);
 
+  // Check for errors early:
   if (posts.length == undefined || posts.length < 10) {
     notFound();
+    // We dont need this because we're invoking the Not-Found page:
     // return <p>Error fetching posts</p>;
   }
 

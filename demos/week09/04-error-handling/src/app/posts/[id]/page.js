@@ -7,8 +7,10 @@ export default async function PostPage({ params }) {
   const post = await response.json();
   console.log("the post is", post);
 
+  // A way of checking if we have a response from our API, or if our response is blank:
   if (!post.id) {
     notFound();
+    // Again we don't need this:
     // return <p>We couldnt find any data for that....</p>;
   }
 

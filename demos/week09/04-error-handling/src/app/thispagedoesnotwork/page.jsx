@@ -5,6 +5,7 @@ export default function BrokenPage() {
     "Oh man, we're so sorry. something has broken, and it's definitely being looked into"
   );
 
+  // we never reach this because of the error ALWAYS throwing above:
   return (
     <div>
       <h2>Welcome to the broken page!</h2>
