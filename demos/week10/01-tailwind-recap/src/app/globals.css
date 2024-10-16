@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --company-will: #abfff8;
+  --company-george: #d8f0ee;
+  --company-michelle: #dc143c;
+  --company-kyle: #008080;
+}
+
+.card-container {
+  display: flex;
+  gap: 10px;
+}
+
+.info-card {
+  margin: 2px;
+  padding: 5px;
+
+  height: 100px;
+  width: 80px;
+}
+
+.big-info-card {
+  margin: 2px;
+  padding: 5px;
+
+  height: 200px;
+  width: 180px;
+}
+
+.grey-background-colour {
+  background-color: grey;
+}
+
+.flex {
+  display: flex;
+}
