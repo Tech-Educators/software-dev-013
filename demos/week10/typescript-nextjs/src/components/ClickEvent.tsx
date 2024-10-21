@@ -10,7 +10,7 @@ export default function ClickEvent() {
     const [count, setCount] = useState(0)
     const [userData, setUserData] = useState<FetchedData[] | null>(null)
     // i don't typescript to gues what type the useState should accpet, I want to enforce that it only takes a number or null
-    const [name, setName] = useState<number>('string')
+    const [name, setName] = useState<string>('string')
 
     // how to type different events.
     function handleClick(e: React.MouseEvent<HTMLButtonElement>) {

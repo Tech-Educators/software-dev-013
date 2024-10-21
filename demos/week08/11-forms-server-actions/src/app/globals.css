@@ -25,3 +25,9 @@ body {
     text-wrap: balance;
   }
 }
+
+
+h2 {
+  font-family: var(--font-yellowtail);
+  color: salmon;
+}

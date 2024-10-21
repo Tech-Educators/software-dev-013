@@ -1,16 +1,19 @@
-import localFont from "next/font/local";
+import {Gluten, Yellowtail} from "next/font/google"
 import "./globals.css";
 import NavBar from "@/components/NavBar";
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+
+
+export const gluten = Gluten({
+  subsets: ['latin']
+})
+
+// when you set variables for fonts, it has start --font-
+// allows us to use the font in our css files
+const yellowtail = Yellowtail({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-yellowtail'
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -21,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${gluten.className} ${yellowtail.variable} antialiased`}
       >
         <NavBar/>
         {children}

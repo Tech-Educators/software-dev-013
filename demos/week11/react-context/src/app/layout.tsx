@@ -32,14 +32,16 @@ export default function RootLayout({
 
 
 import { UserProvider } from "./UserContext";
-
-export default function RootLayout({chidlren}) {
+import {ThemeProvider} from "./ThemeContext"
+export default function RootLayout({children}) {
   return (
      <html lang='en'>
       <UserProvider>
+        <ThemeProvider>
         <body className={`${inter.className}`}>
           {children}
         </body>
+        </ThemeProvider>
       </UserProvider>
      </html>
   );

@@ -1,6 +1,7 @@
 import {Gluten, Yellowtail} from "next/font/google"
 import "./globals.css";
 import NavBar from "@/components/NavBar";
+import Section from "@/components/structure/Section";
 
 
 export const gluten = Gluten({
@@ -27,7 +28,9 @@ export default function RootLayout({ children }) {
         className={`${gluten.className} ${yellowtail.variable} antialiased`}
       >
         <NavBar/>
-        {children}
+        <Section>
+          {children}
+        </Section>
       </body>
     </html>
   );

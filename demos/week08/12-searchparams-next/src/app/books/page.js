@@ -1,4 +1,6 @@
+import BooksGrid from "@/components/structure/BooksGrid"
 import { connect } from "@/utitlies/connect"
+import { formatTitle } from "@/utitlies/urls"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -10,6 +12,8 @@ export default async function Page({searchParams}) {
     const db = connect()
 
     const books = (await db.query(`SELECT * FROM books`)).rows
+
+    console.log(books)
 
     const sorted = books.sort((a, b) => {
         // a and b represent the two things we're comparing. 
@@ -25,22 +29,11 @@ export default async function Page({searchParams}) {
             <Link href='/books?sortBy=asc'>Sort by asc</Link>
             <Link href='/books'>Remove sort</Link>
         </div>
-        {sorted.map(book => (
-            <div key={book.id} className="relative group">
-                <Image
-                    src={book.img_url}
-                    alt={book.title}
-                    height={250}
-                    width={100}
-                    className="w-full h-64 object-cover rounded-lg shadow-md"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                    <h2 className="text-white text-xl font-bold text-center p-2">
-                        {book.title}
-                    </h2>
-                </div>
-            </div>
-        ))}
+        <BooksGrid books={sorted} />
     </div>
     )
 }
+
+
+//0000 0000
+// 
