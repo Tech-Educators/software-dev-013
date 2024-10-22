@@ -79,7 +79,9 @@ Build the Docker Image:
 
 Build your Docker image by running the following command: (The -t flag allows you to tag the image)
 
+```
 docker build -t "your docker username"/my-node-app:latest .
+```
 
 Docker will execute the instructions in the Dockerfile, and each step is cached, so if no changes are made, future builds will be faster.
 
@@ -87,7 +89,9 @@ Run the Container:
 
 Run the container using the image you just built. The -p flag maps port 8081 on the container to port 8081 on the host.
 
+```
 docker run -p 8081:8081 my-node-app
+```
 
 Open your browser and navigate to http://localhost:8081. You should see "Hello from Docker!".
 
@@ -95,6 +99,7 @@ To Dockerize a Next.js App:
 
 Create the Dockerfile for Next.js:
 
+```
 # Step 1: Use a lightweight Node.js base image
 
 FROM node:alpine
@@ -123,12 +128,17 @@ EXPOSE 8081
 # Step 7: Define the command to run the app
 
 CMD ["npm", "start"]
+```
 
 Build and Run the Container:
 
+```
 docker build -t joeventon/my-next-app:latest .
+```
 
+```
 docker run -p 8081:8081 my-next-app
+```
 
 Navigate to http://localhost:8081 to see your Next.js app running in a container.
 
@@ -142,6 +152,7 @@ Example: A Node.js App with PostgreSQL:
 
 Create the docker-compose.yml File:
 
+```
 services:
 web:
 image: node:alpine
@@ -157,17 +168,22 @@ POSTGRES_USER: myuser
 POSTGRES_PASSWORD: mypassword
 POSTGRES_DB: mydatabase
 ports: - "5432:5432"
+```
 
 Run Docker Compose:
 
+```
 docker compose up
+```
 
 This command starts both the Node.js application and PostgreSQL database in separate containers.
 You can now connect to the PostgreSQL database on localhost:5432 and access the web app on localhost:8081.
 
 This command:
 
+```
 docker exec -it nodejs-db-1 psql -U myuser -d mydatabase
+```
 
 will run a service in your termin that allows tou to write SQL in the terminal and edit your DB.
 
@@ -177,7 +193,9 @@ Mount Volumes: In development, use Docker’s volume mounting to keep your code 
 
 In nextjs, after you have created the image (make sure you edit the command to use the ports that you have specified):
 
+```
 docker run -p 8081:8081 -v $(pwd):/usr/src/app -v /usr/src/app/node_modules "name of your app" npm run dev -- -p 8081
+```
 
 Now, any changes to your code are automatically reflected inside the running container.
 
@@ -185,7 +203,9 @@ When deploying Dockerized applications, you’ll typically want to push the fina
 
 Example: Push to Docker Hub (replace app name and dockerhub username with yours!)
 
+```
 docker tag "name of your app" "dockerhub username"/"name of your app":latest
 docker push "dockerhub username"/"name of your app":latest
+```
 
 Now the image is available in Docker Hub and can be pulled from anywhere.
