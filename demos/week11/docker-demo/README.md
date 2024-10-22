@@ -48,6 +48,7 @@ The Dockerfile tells Docker how to build your image, what base image to use, wha
 
 Dockerfile:
 
+```
 # Step 1: Use a lightweight Node.js base image
 
 FROM node:alpine
@@ -72,6 +73,7 @@ EXPOSE 8081
 # Step 6: Define the command to run the app
 
 CMD ["npm", "start"]
+```
 
 Build the Docker Image:
 
