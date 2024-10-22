@@ -1,0 +1,28 @@
+version: "3"
+services:
+  # Node.js Service
+  web:
+    build: .
+    ports:
+      - "8081:8081"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - db # Wait for the database to be ready
+
+  # PostgreSQL Service
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # This extra line is optional, it will run my init.sql file after the DB is created which will seed the database.
+
+volumes:
+  pgdata: # This volume will store the database data
